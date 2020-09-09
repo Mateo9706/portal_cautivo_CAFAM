@@ -3,3 +3,4 @@ requests==2.23.0
 google-cloud==0.34.0
 marshmallow==3.7.1
 Flask-SQLAlchemy==2.4.4
+google-cloud-storage
