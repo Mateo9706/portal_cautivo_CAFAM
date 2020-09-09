@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "anawifi",
+  "private_key_id": "c437eb46acc2125a09955260d89a21d83dd7c415",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDHDMnJS9w/ImJN\nr3ufyGsvPmiy1K9XTZtS+5MyD/tW/RyJI3lVRurTbUWBLOpKTLGGsVSRvmo77Xv9\n531+LvRdg6/yjVv44garhW+9iMJr7+zGEqeMpcqbKEMnD2aZ8Yq129fbz/wgtAaw\ntmOiazTRknaho8Wl4WdMs4yh1PoAVW2UUSbc6esal3VNlD9c9u7tpztNQjQ+T3tl\nlJpdhUDEq86kETi9EJK0tnZzEWwhjmmPsqROzq4A5alX7a/Z/isHARk4vu+QSqBR\nwfx/AEUDm2Aes67Ta7QmPIJPhbmQUXabPRgcTp+oEhtlJ/V8JEx9av9m7KKwd9DG\nCqTMSvKZAgMBAAECggEAAUUBnHkRZI2xltFBtpkupdR+EnXs0F+8V+Em5TDY54sh\nvXYude7H3KVbxiElNWgb0cIbyfou70bqfYoWcNGX2WjXnHJuXb4DUOC+/7R5mPqk\nxfakfu8nxamSFBOzEdRKkDJgxBQlhYfgawwewpBwe821V/6VaiNv5ztV8EpNdecS\nsbSfmcxW7iNMxwM79vIjgf7bxbjirU5OMkoB87BUK1K7+acI4za7dM4DGT+p6kwG\nsbtjBG6RUkQHYb/TgdZVOMYZF9DQ9+3dZQv0ZFEVOHg5Ig08g7WdmhVP5IKm0PC4\nQM+9+yDMAq973dLy9d1cBdG00iSwVRB+U2G2+oOi6QKBgQD28jNIy4tgWC+eo1vK\n0MJPPFP1+2/iw0FnMXlxquEG31UJ4sluydrqK1eHIBmmy46jGNTj47i9RN9m7eFb\nMdlqLxmXcXgJ7OGHNLuEoJ7ub3zZImlzR4Ks0w/jZOwvTVjhRDBbE6J1EcL/s9MT\nGFg6F9+qOb+9PRSYE+rJri1UpwKBgQDOWQqxtsPCz70FBNrEDfrGzn+CNT8Wkbnd\n8dZrBvyBJu3bynYA6t5IDfvHWxM68tHY/FQbK6VnCZcC2zjhuWPMahTouKJIZaf7\nKHKZ/8YPz0EROoha0GyDOOReG0L8bOa0P8eo5x/VKZq2c5aMJltzqk2yXAVoqgBh\nMXy559gmvwKBgQCEoKQGjrs2bWZ17wqXrPMPFzmIvRfkVDXGNH4jHEFrLXtAqfrB\nc8wNRGXn/seIG39p/SYplt5bWKgbYdtM3UMFknJOMfTkb8LYmOu1WYbCTEJjY+X6\nsgduxpSb7lIjPYlkwvitkagI9BckufG9KbAI01We2REvk6SB4QCSfOd/tQKBgQCP\nU3fDIrBs00B2iP2vKgqjJnGYroVolsXkbINDifG/f5u9i65VSs4kfFoDCbacvmaV\n8gY1bSaRIC8dE8o5tzyjkpd9YimOYdXA9UJMx0T6XDnUzrRBZ/3HU7AD0anAjZ/d\nWWPEZO1OcXx9+GF8bXQeLg+TsKktHs/usqHwuyH/HwKBgQCOBRPwi6UiZGkDStny\nsJePSomBDuNTGMMv/Hv6IcMoYo9aqH/MokefF9KKcEswtGS4e2adUEbH9cChaUvW\nUcqkNKF+/cNwlkqy0zXX1U1JAZrnQnvQl9QN58LXRL2mV3/JCmpv9ojgil/x2HMT\nEZIGHiof3mVAbTl5RNffA4aGNQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "cafamwifi@anawifi.iam.gserviceaccount.com",
+  "client_id": "115115862969865717651",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cafamwifi%40anawifi.iam.gserviceaccount.com"
+}
