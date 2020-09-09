@@ -11,32 +11,10 @@ import os
 
 
 BASE_DIR=os.path.abspath(os.path.dirname(__file__))
-DB_URI="sqlite:///" + os.path.join(BASE_DIR, "database_server.db")
 datos = []
 
 
 app=Flask(__name__)
-
-
-app.config["SQLALCHEMY_DATABASE_URI"]=DB_URI
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"]=False
-db = SQLAlchemy(app)
-
-class Frame(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(50))
-    email = db.Column(db.String(50))
-    ip_disp = db.Column(db.String(50))
-    mac_disp = db.Column(db.String(50))
-    mac_ap = db.Column(db.String(50))
-
-class FrameSchema(Schema):
-    id = fields.Int()
-    name = fields.Str()
-    email = fields.Str()
-    ip_disp = fields.Str()
-    mac_disp = fields.Str()
-    mac_ap = fields.Str()
 
 global base_grant_url
 base_grant_url=""
@@ -49,18 +27,6 @@ global IP_CLIENT,MAC_CLIENT, MAC
 IP_CLIENT=""
 MAC_CLIENT=""
 MAC=""
-
-
-@app.route("/api/usuarios/", methods=["GET"])
-def get_frame():
-    # frame=Frame.query.filter_by(name=name).first()
-    # frame_schema=frameSchema()
-    # result=frame_schema.dump(frame)
-    # return jsonify(result)
-    frames = Frame.query.all()
-    frames_schema = FrameSchema(many=True)
-    result = frames_schema.dump(frames)
-    return jsonify(result)
 
 
 """"
@@ -146,18 +112,6 @@ def logging():
     print(success_url)
 	
     DataCaptive(datos)
-
-    frame_user = Frame(name=user)
-    frame_email = Frame(email=user_email)
-    frame_ip_disp = Frame(ip_disp=IP_CLIENT)
-    frame_mac_disp = Frame(mac_disp=MAC_CLIENT)
-    frame_mac_ap = Frame(mac_ap=MAC)
-    db.session.add(frame_user)
-    db.session.add(frame_email)
-    db.session.add(frame_ip_disp)
-    db.session.add(frame_mac_disp)
-    db.session.add(frame_mac_ap)
-    db.session.commit()
 
     #frame_dict = {"id": frame.id, "name": frame.name, "email": frame.email}
     #return redirect(base_grant_url + "?continue_url=" + success_url + "&duration=3600", code=302)
