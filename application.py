@@ -50,7 +50,7 @@ def click():
     #base_grant_url = "https://n34.network-auth.com/splash/grant"
     #print(base_grant_url)
     global user_continue_url
-    user_continue_url = "https://www.facebook.com/CafamFloresta.CC"
+    user_continue_url = "https://www.google.com"
     global success_url
     global host,IP_CLIENT,MAC_CLIENT,MAC
 
@@ -84,7 +84,7 @@ def logging():
     global base_grant_url
     base_grant_url = "https://n129.network-auth.com/splash/grant"
     global user_continue_url
-    user_continue_url = "https://www.facebook.com/CafamFloresta.CC"
+    user_continue_url = "https://www.google.com"
     global success_url
 
     user=request.form["Usuario"]
@@ -123,7 +123,7 @@ def Success():
     global user_continue_url
     print(user_continue_url)
     #return redirect(base_grant_url + "?continue_url=" + success_url + "&duration=3600", code=302)
-    return redirect("https://www.facebook.com/CafamFloresta.CC")
+    return redirect("https://www.google.com")
     #return render_template("Success.html",user_continue_url=user_continue_url)
 
 
