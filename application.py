@@ -82,7 +82,7 @@ def click():
 def logging():
     global host,IP_CLIENT,MAC_CLIENT,MAC
     global base_grant_url
-    base_grant_url = "https://n129.network-auth.com/splash/grant"
+    base_grant_url = "https://n356.network-auth.com/splash/grant"
     global user_continue_url
     user_continue_url = "https://www.google.com"
     global success_url
