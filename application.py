@@ -90,33 +90,42 @@ def logging():
     user=request.form["Usuario"]
     user_email=request.form["Email"]
     celular = request.form["Celular"]
-    genero = request.form["Genero"]
+    #genero = request.form["Genero"]
+    genero = request.form["selector_genero"]
     motivo = request.form["selector_motivo"]
+    check = request.form.get('cbox')
+    print("acap",check)
+    if request.form.get('cbox') == "1":
+        #print(user,user_email,celular,genero,motivo,IP_CLIENT,MAC_CLIENT)
+        datos.append(user)
+        datos.append(user_email)
+        datos.append(celular)
+        datos.append(genero)
+        datos.append(motivo)
+        datos.append(IP_CLIENT)
+        datos.append(MAC_CLIENT)
+        print(datos)
 
-    #print(user,user_email,celular,genero,motivo,IP_CLIENT,MAC_CLIENT)
-    datos.append(user)
-    datos.append(user_email)
-    datos.append(celular)
-    datos.append(genero)
-    datos.append(motivo)
-    datos.append(IP_CLIENT)
-    datos.append(MAC_CLIENT)
-    print(datos)
+        #print(base_grant_url)
+        #print(base_grant_url +"?continue_url=" + success_url)
+        #host=request.host_url
+        #host_n=host+"login"
 
-    #print(base_grant_url)
-    #print(base_grant_url +"?continue_url=" + success_url)
-    #host=request.host_url
-    #host_n=host+"login"
+        print(base_grant_url +"?continue_url=" + success_url)
+        print(success_url)
 
-    print(base_grant_url +"?continue_url=" + success_url)
-    print(success_url)
-	
-    DataCaptive(datos)
+        DataCaptive(datos)
 
-    #frame_dict = {"id": frame.id, "name": frame.name, "email": frame.email}
-    #return redirect(base_grant_url + "?continue_url=" + success_url + "&duration=3600", code=302)
-    return redirect(base_grant_url +"?continue_url=" + success_url, code=302)
-    #return redirect(host_n +"?base_grant_url="+ base_grant_url + "?continue_url=" + success_url, code=302)
+        # frame_dict = {"id": frame.id, "name": frame.name, "email": frame.email}
+        # return redirect(base_grant_url + "?continue_url=" + success_url + "&duration=3600", code=302)
+        return redirect(base_grant_url + "?continue_url=" + success_url, code=302)
+        # return redirect(host_n +"?base_grant_url="+ base_grant_url + "?continue_url=" + success_url, code=302)
+
+    else:
+        print("No se envian datos")
+        return render_template("Inicio.html")
+
+
 
 @app.route("/Success", methods=["GET"])
 def Success():
@@ -126,9 +135,12 @@ def Success():
     return redirect("https://es-la.facebook.com/CafamFloresta.CC/")
     #return render_template("Success.html",user_continue_url=user_continue_url)
 
+@app.route("/Politicas")
+def polit():
+    return render_template("Politicas.html")
 
-#if __name__ == "__main__":
+if __name__ == "__main__":
     #db.create_all()
-    #app.run(debug=False)
+    #app.run(host='0.0.0.0', port=8900, debug=False)
 
 

@@ -8,13 +8,16 @@
         TypekitConfig={kitId:"hum1oye",scriptTimeout:1.5e3},function(){var a=document.getElementsByTagName("html")[0];a.className+=" wf-loading";var b=setTimeout(function(){a.className=a.className.replace(/(\s|^)wf-loading(\s|$)/g,""),a.className+=" wf-inactive"},TypekitConfig.scriptTimeout),c=document.createElement("script");c.src="//use.typekit.com/"+TypekitConfig.kitId+".js",c.type="text/javascript",c.async="true",c.onload=c.onreadystatechange=function(){var a=this.readyState;if(!a||a=="complete"||a=="loaded"){clearTimeout(b);try{Typekit.load(TypekitConfig)}catch(c){}}};var d=document.getElementsByTagName("script")[0];d.parentNode.insertBefore(c,d)}()
     </script>
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='Styles.css')}}">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="static/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="static/all.css">
     <script type="text/script" src='fonts.js'></script>
     <link rel="shorcurt icon" href="static/logocaf.jpg" type="image/x-ico">
     <script type="text/script" src="jquery.js"></script>
     <script type="text/script" src="bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -23,25 +26,28 @@
         <div class="card" style="border-radius: 30px;">
 
             <div style="background-color:none;" class="card-header">
-                <div style="text-align: left;"><img src="/static/wifi-11.png" width="100" height="50"><img src="/static/wifi-12.png" width="100" height="50" style="text-align: right;">
+                <div style="text-align: left;"><img src="/static/wifi-11.png" width="100" height="50"><img src="/static/wifi-12.png" width="100" height="50" style="text-align: right;"><font SIZE=2.5 color="gray" style="font-weight: bolder;">Centro Comercial CAFAM Floresta</font>
                 </div>
-
-
             </div>
             <form action="/login" method="POST">
             <div class="card-body">
 
                 <div style="border-bottom: none; margin-top: 10px; border:none!important;font-weight: bolder; color: gray;"><img src="/static/wifi-05.png" width="25" height="25" align="left" >Usuario</div>
-                <div style="border-bottom: none; margin-top: 10px; border:none!important;"><input type="text" name="Usuario" id="Usuario" placeholder="Escriba su Usuario"  style="width: 100%; border: none;" required="required"> </div>
+                <div style="border-bottom: none; margin-top: 10px; border:none!important;"><input type="text" name="Usuario" id="Usuario" placeholder="Escriba su Usuario"  style="width: 100%; border: none;" required pattern="[A-Za-z ]{0,30}" title="Solo letras. Tamaño máximo: 30"> </div>
 
                 <div style="border-bottom: none; margin-top: 10px; border:none!important;font-weight: bolder; color: gray;";><img src="/static/wifi-06.png" width="30" height="22" align="left">Email</div>
-                <div style="border-bottom: none; margin-top: 10px; border:none!important;"><input name="Email" id="Email" type="text" placeholder="Escriba su Email"  style="width: 100%; border: none;" required="required"> </div>
+                <div style="border-bottom: none; margin-top: 10px; border:none!important;"><input name="Email" id="Email" type="text" placeholder="Escriba su Email"  style="width: 100%; border: none;" required pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{0,30}" title="Introduce una direccion de correo válida. Tamaño máximo: 30"> </div>
 
                 <div style="border-bottom: none; margin-top: 10px; border:none!important;font-weight: bolder; color: gray;"><img src="/static/wifi-07.png" width="25" height="25" align="left">Celular</div>
-                <div style="border-bottom: none; margin-top: 10px; border:none!important;"><input name="Celular" id="Celular" type="text" placeholder="Escriba su Celular"  style="width: 100%; border: none;" required="required"> </div>
+                <div style="border-bottom: none; margin-top: 10px; border:none!important;"><input name="Celular" id="Celular" type="text" placeholder="Escriba su Celular"  style="width: 100%; border: none;" required pattern="[0-9]{0,15}" title="Solo números. Tamaño máximo: 15"> </div>
 
-                <div style="border-bottom: none; margin-top: 10px; border:none!important;font-weight: bolder; color: gray;"><img src="/static/wifi-09.png" width="25" height="25" align="left">Genero</div>
-                <div style="border-bottom: none; margin-top: 10px; border:none!important;"><input name="Genero" id="Genero" type="text" placeholder="Escriba su Genero"  style="width: 100%; border: none;" required="required"> </div>
+                <div style="border-bottom: none; margin-top: 10px; border:none!important;font-weight: bolder; color: gray;"><div style="border-bottom: none; margin-top: 10px; border:none!important;font-weight: bolder; color: gray;"><img src="/static/wifi-09.png" width="25" height="25" align="left">Genero</div>
+                <div style="border-bottom: none; margin-top: 10px; border:none!important;font-weight: bolder; color: gray;">
+                    <select name="selector_genero"  style="border: none;color: gray;width: 100%;">
+                                        <option>Seleccione su género</option>
+                                        <option style="color: black;">Femenino</option>
+                                        <option style="color: black;">Masculino</option></select></div>
+                <!--<div style="border-bottom: none; margin-top: 10px; border:none!important;"><input name="Genero" id="Genero" type="text" placeholder="Escriba su Genero"  style="width: 100%; border: none;" required="required"> </div>-->
 
                 <div style="border-bottom: none; margin-top: 10px; border:none!important;font-weight: bolder; color: gray;"><img src="/static/wifi-08.png" width="25" height="25" align="left">Motivo de Visita</div>
                 <div style="border-bottom: none; margin-top: 10px; border:none!important;font-weight: bolder; color: gray;">
@@ -50,9 +56,15 @@
                                         <option style="color: black;">Compras</option>
                                         <option style="color: black;">Cine</option>
                                         <option style="color: black;">Bancos</option></select></div>
-                <div style="float: none; text-align: right; margin-top: 30px;">
-                    <input type="image" value="Enviar" src="/static/wifi-10.png" width="160" height="70"></div>
 
+                    <div style="border-bottom: none; margin-top: 10px; border:none!important;font-weight: bolder; color: gray;">
+                        <iframe src="http://192.168.56.1:8900/Politicas" name="iframe_a" height="50" width="430" style="border-radius: 10px;"></iframe></div>
+                    <div style="border-bottom: none; margin-top: 10px; border:none!important;"><font><input type="checkbox" class="btn btn-primary" id="cbox" name="cbox" value="1" style="text-align: left;"> Acepta los términos y condiciones</font></div>
+
+                    <div style="float: none; text-align: right; margin-top: 1px;">
+                    <input type="image" value="Enviar" src="/static/wifi-10.png" width="100" height="40"></div>
+
+            </div>
             </div>
             </form>
             </div>
@@ -63,13 +75,11 @@
 
         </div>
 
-
-
-
     </div>
 </div>
 
 </div>
+
 </body>
 
 
