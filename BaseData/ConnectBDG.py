@@ -2,7 +2,7 @@ from google.cloud import bigquery
 import os
 
 dataset="cafamwf.cafam.portalCautivoData"
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/home/site/wwwroot/key/cafamwf-ebece760cbc0.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = './key/cafamwf-ebece760cbc0.json'#'/home/site/wwwroot/key/cafamwf-ebece760cbc0.json'
 client = bigquery.Client()
 
 
