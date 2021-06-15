@@ -2,11 +2,7 @@ from google.cloud import bigquery
 import os
 
 dataset="cafamwf.cafam.portalCautivoData"
-<<<<<<< Updated upstream
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = './key/cafamwf-ebece760cbc0.json'#'/home/site/wwwroot/key/cafamwf-ebece760cbc0.json'
-=======
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'C:/Users/cmb585103/Documents/GitHub/portal_cautivo_CAFAM/key/cafamwf-ebece760cbc0.json'#'/home/site/wwwroot/key/cafamwf-ebece760cbc0.json'
->>>>>>> Stashed changes
 client = bigquery.Client()
 
 
