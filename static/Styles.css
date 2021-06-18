@@ -7,6 +7,8 @@ html, body {
     font-family: 'Numans', sans-serif;
 }
 
+@media screen and (min-width: 321px) and (max-width: 768px) { }
+
 .container {
     height: 100%;
     align-content: center;
