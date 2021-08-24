@@ -4,7 +4,7 @@ import sys,getopt
 import json
 
 from datetime import datetime
-from BaseData.ConnectBDG import *
+#from BaseData.ConnectBDG import *
 from flask_sqlalchemy import SQLAlchemy
 from marshmallow import Schema, fields
 import os
